@@ -1,0 +1,45 @@
+//- Para poder utilizar todo lo que tenemos en layouts:
+extends ./layout/index
+
+//- Finalmente para agregar el contenido tenemos debemos indicar el bloque y posteriormente incluir el contenido a agregar
+block contenido
+
+  //- Si colocamos la etiqueta HTML y dejamos un espacio, estamos indicando que se trata de una simple etiqueta, pero si le colocamos un "=" entonces esperará una variable
+  //- p= viajes
+  //- Esta también es una sintaxis válida para pasar variables a la vista
+  //- p #{viajes}
+  //- p Nosotros
+
+  //- Los atributos se pasan entre paréntesis
+  //- img(src="img/cupon.jpg")
+
+  main.container.mt-5
+    .row
+      .col-md-5 
+        img(src="img/nosotros.jpg", alt="imagen nosotros", class="img-fluid")
+      .col-md-7
+        h1= pagina        
+
+        blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lorem urna, malesuada et quam porta, laoreet rutrum velit. Aliquam pretium nibh quis libero varius, quis eleifend metus accumsan. Donec ante enim, luctus eu faucibus interdum, malesuada eget nibh. Proin id elementum ligula, ac dignissim nibh. Integer quis rutrum lectus.
+
+        p In bibendum varius tellus, nec gravida odio bibendum nec. Donec non semper diam. Morbi ultricies metus et urna fermentum posuere. Aliquam eu tempor tellus, sit amet condimentum risus. Sed feugiat ultrices risus vel pellentesque. Vivamus imperdiet elit vel ex efficitur, in commodo metus maximus. Ut fringilla sit amet sapien id feugiat.
+
+        p Aenean hendrerit orci ac ipsum tincidunt malesuada. Aenean pulvinar nunc sit amet sapien pulvinar rhoncus. Quisque ultrices pellentesque lobortis. Duis vulputate sagittis lacus, eu egestas mauris finibus in. Integer sed tristique risus, in volutpat nisi. Nulla facilisi. Cras et aliquam leo. Cras luctus sapien eu nulla malesuada, ac facilisis nibh pellentesque.
+  
+  .listado-iconos
+    .container.mt-5.py-5.text-center
+      .row
+        .col-md-4
+          img(src="img/icono_seguridad.svg", alt="icono seguridad", class="img-fluid mb-4")
+          h2.mb-4 Seguridad
+          p In bibendum varius tellus, nec gravida odio bibendum nec. Donec non semper diam. Morbi ultricies metus et urna fermentum posuere.
+
+        .col-md-4
+          img(src="img/icono_destinos.svg", alt="icono destinos", class="img-fluid mb-4")
+          h2.mb-4 Mejores Destinos
+          p In bibendum varius tellus, nec gravida odio bibendum nec. Donec non semper diam. Morbi ultricies metus et urna fermentum posuere.
+
+        .col-md-4
+          img(src="img/icono_precios.svg", alt="icono precios", class="img-fluid mb-4")
+          h2.mb-4 Los Mejores Precios
+          p In bibendum varius tellus, nec gravida odio bibendum nec. Donec non semper diam. Morbi ultricies metus et urna fermentum posuere.
